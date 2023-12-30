@@ -13,7 +13,7 @@ async function Quizzes() {
   return (
     <ul>
       {quizzes.map((quiz) => (
-        <li>
+        <li key={quiz.id}>
           <Link href={`/quiz/${quiz.id}`}>{quiz.title}</Link>
         </li>
       ))}
