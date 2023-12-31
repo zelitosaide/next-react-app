@@ -1,6 +1,7 @@
 import Link from "next/link";
 import postgres from "postgres";
 import { Suspense } from "react";
+import QuizForm from "./quiz-form";
 
 const sql = postgres(process.env.DATABASE_URL!);
 
@@ -29,6 +30,7 @@ export default function Home() {
       <Suspense fallback={<p>Loading...</p>}>
         <Quizzes />
       </Suspense>
+      <QuizForm />
     </section>
   );
 }

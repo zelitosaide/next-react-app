@@ -29,7 +29,7 @@ async function Quiz({
     <div>
       {/* <h1>{quiz[0].title}</h1> */}
       <h1 className="text-2xl">{answers[0].quiz_title}</h1>
-      <h1 className="text-2xl text-gray-7 00">{answers[0].quiz_description}</h1>
+      <h1 className="text-2xl text-gray-700">{answers[0].quiz_description}</h1>
       <h1 className="text-xl my-4">{answers[0].quiz_question}</h1>
       <ul>
         {answers.map((answer) => (
@@ -58,7 +58,7 @@ export default function QuizPage({
       <form
         action={async () => {
           "use server";
-          redirect(`/quiz/${params.id}?show=true`)
+          redirect(`/quiz/${params.id}?show=true`);
         }}
       >
         <button className="bg-gray-200 p-2 m-2 rounded hover:bg-gray-300 transition-all">
